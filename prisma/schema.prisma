@@ -1,0 +1,45 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Technology {
+  id Int @id @default(autoincrement())
+  name String
+  duties Duty[]
+}
+
+model Experience {
+  id Int @id @default(autoincrement())
+  companyName String
+  position String
+  startDate Int
+  endDate Int?
+  duties Duty[]
+}
+
+model Tag {
+  id Int @id @default(autoincrement())
+  name String
+  duties Duty[]
+}
+
+model Duty {
+  id Int @id @default(autoincrement())
+  description String
+  technologies Technology[]
+  tags Tag[]
+  experiences Experience[]
+}
+
+model Education {
+  id Int @id @default(autoincrement())
+  school String
+  graduationDate Int
+  degree String
+  discipline String
+}
