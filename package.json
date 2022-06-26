@@ -30,6 +30,7 @@
   "dependencies": {
     "@graphql-tools/schema": "^8.3.14",
     "@graphql-yoga/node": "2.9.1",
-    "graphql": "^16.5.0"
+    "graphql": "^16.5.0",
+    "graphql-scalars": "^1.17.0"
   }
 }

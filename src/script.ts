@@ -15,8 +15,8 @@ async function main() {
     }
   })
 
-  const allLinks = await prisma.experience.findMany()
-  console.log(allLinks)
+  const allExperiences = await prisma.experience.findMany()
+  console.log('all exp', allExperiences)
 }
 
 // 4
